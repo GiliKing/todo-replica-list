@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;1,100&family=Nunito:wght@200&family=Poppins&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif ;
+}
+
+h1{
+   /* align-items: center;*/
+   margin-top: 50px;
+    margin: 0px auto;
+   /* text-align: center;*/
+   margin-bottom: 10px;
+   justify-content: center;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    background: #161117;
+}
+
+.todo-container{
+    width: 40%;
+    margin: 0 auto;
+}
+
+.input{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.input .form-control{
+    background: transparent;
+    border: none;
+    height: 50px;
+    border-radius: 5px;
+    width: 90%;
+    padding: 0px 20px;
+    font-size: 16px;
+    color: #838284;
+    box-shadow: -6px -6px 10px rgb(255,255,255,0.03),
+                  6px 6px 10px rgb(10,8,10,0.8),
+                 inset -6px -6px 10px rgb(255,255,255,0.05),
+                inset  6px 6px 10px rgb(12,8,12,0.8);
+}
+
+.input .form-control:focus{
+    outline: none;
+}
+
+.add .material-icons {
+    background: #ffc800;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #161117;
+    border-radius: 50%;
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.todo-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    color: #716973;
+    background: #221525;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 15px;
+    box-shadow: 0px 5px 10px rgb(0,0,0,0.55);
+}
+
+.left-cont input{
+    display: none;
+    cursor: pointer;
+}
+
+.left-cont label{
+    position: relative;
+    cursor: pointer;
+}
+
+.left-cont label:before{
+    content: '';
+    padding: 11px;
+    display: inline-block;
+    position: relative;
+    margin-right: 8px;
+    vertical-align: middle;
+    background: #412d46;
+    border-radius: 3px;
+}
+
+.left-cont input:checked + label:before{
+    background: #ffc800;
+}
+
+.left-cont input:checked + label:after{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top: 4px;
+    left: 8px;
+    width: 5px;
+    height: 12px;
+    border: solid #221525;
+    border-width: 0px 2px 2px 0px;
+    transform: rotate(45deg);
+}
+
+.remove{
+    color: #ff0047;
+    cursor: pointer;
+    line-height: 1;
+    transform: translate();
+    transition: .5s;
+}
+
+.remove .active{
+    transform: translate(0px);
+    transition: .5s;
+}
